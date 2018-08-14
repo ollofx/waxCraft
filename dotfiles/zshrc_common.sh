@@ -51,9 +51,13 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
 # Theme
-antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_CHAR_SYMBOL="❯ "
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+##or:
+#antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+#SPACESHIP_TIME_SHOW=true
+#SPACESHIP_CHAR_SYMBOL="❯ "
+
 
 # Tell Antigen that you're done.
 antigen apply
@@ -70,7 +74,7 @@ if [ -f "/usr/share/nvm/init-nvm.sh" ]; then
     fi
 fi
 
-export TERM="tmux-256color"
+#export TERM="tmux-256color"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
 # Bind ctrl + space

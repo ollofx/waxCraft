@@ -1,0 +1,18 @@
+session_name: waxwatch
+windows:
+- window_name: dev window
+  layout: tiled
+  shell_command_before:  # run as a first command in all panes
+    - zsh
+    - cd ~/
+  panes:
+    - shell_command:           # pane no. 1
+        - cd /var/log          # run multiple commands in this pane
+        - ls -al | grep \.log
+    - htop         # pane no. 2
+    - shell_command:          # pane no. 4
+      - sudo -u www -i
+      - cd apps/intraday/
+    - shell_command:          # pane no. 4
+      - sudo -u www -i
+      - cd apps/intraday/
